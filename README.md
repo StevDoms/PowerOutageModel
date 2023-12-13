@@ -12,3 +12,7 @@ For our model, we used a decision tree classifier. We only specified the criteri
 
 We evaluated the performance of our model using the f1_score method, and our model received an f1_score of 0.6118824440755535. This suggests that the harmonic mean of precision and recall to be 0.6118, indicating a reasonably good balance between precision and recall. As such, our current model is pretty good.
 
+## Final Model
+
+We used the exact same features that is used for the baseline model. We transformed both the nominal variables with One Hot Encoding. However, instead of leaving the quantitative variables as is, we applied StandardScalar() to the Total Price and Outage Duration and QuantileTransformer() to the numbers of customers affected. We applied StandardScaler() to Total Price and Outage Duration to standardize the scale and ensure that features with different magnitudes don’t dominate and aids the model in converging faster. This transformation also helps in normalizing distributions and reducing the impact of outliers, resulting in improved stability. We applied QuantileTransformer() for numbers of customers affected to transform the skewed distributions so that the feature becomes less sensitive to extreme values and better suited for the model. By enhancing feature comparability and reducing bias, these transformations would improve the overall model performance.
+
