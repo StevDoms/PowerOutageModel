@@ -20,5 +20,13 @@ To standardize the comparison with the baseline model, we used a decision tree c
 
 We evaluated the performance of our final model using f1_score, and our model received an f1_score of 0.6626287617698571. Our final model produced a higher f1 score than our baseline model which indicates an improvement in the final model's ability to balance precision and recall compared to the baseline model. This further suggests that the final model is better at capturing true positives while minimizing false positives and false negatives which results in a more reliable and accurate prediction of the cause category of outages.
 
+## Fairness Analysis
 
+We conducted a permutation test for groups which are outages above and below 24 hours. In addition, we used f1_score as our evaluation metric and a significance level of 5%.
+
+**Null hypothesis**: My model is fair. The f1_score for outages above 24hours (1440minutes) is the same as f1_score for outages below 24hours, and any differences are due to random chance </br>
+**Alternative hypothesis**: My model is unfair. The f1_score is different for outages above and below 24 hours.
+**Test Statistic**: Absolute difference between the f1_score of outages above and below 24 hours
+
+Based on our permutation test, we obtain a p-value of 0.0% which is less than our set threshold of 5%. Hence, we reject our null hypothesis, and conclude that there is a statistical difference between the f1_score of outages above and below 24 hours.
 
