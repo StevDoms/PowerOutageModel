@@ -2,6 +2,8 @@
 
 This project was done as part of UCSD's DSC80 class.
 
+Made by: Kenneth Hidayat, Steven Dominic Sahar
+
 ## Framing the Problem
 
 The goal of our analysis is to predict the **cause category** of an outage based on the **outage duration**, **numbers of customers affected**, **total price** of electricity during the outage, **NERC region**, and **climate category**. Since **cause category** is a categorical variable with 7 unique values, we are going to be performing a multiclass classification. We chose to predict the cause category because it allows for different strategies and interventions to be implemented in hopes to mitigate future outages. If severe weather is a prevalent cause, reinforcing infrastructure against extreme conditions might be a priority task to complete. We chose to use F_1 score with weighted average because it considers both the precision and recall, and also accounts for the cause imbalance. Since mitigation plans costs a lot of monetary value, we want to balance out the false positive and false negative to ensure that the mitigation targets the right causes. We don't use other metrics such as accuracy because the causes categories are unevenly distributed which would not provide a comprehensive understanding of the model. 
