@@ -10,3 +10,5 @@ The goal of our analysis is to predict the **cause category** of an outage based
 
 For our model, we used a decision tree classifier. We only specified the criterion to be 'entropy' as our hyperparameters, and as a result, our model uses splitter='best', max_depth=None, min_samples_split=2, min_samples_leaf=1, max_features=None. Our model takes in 3 quantitative variables which are outage duration, numbers of customers affected and total price and 2 nominal variables which are NERC region and climate category as our regressors to predict cause category which is a nominal variable. We performed one hot encoding for the NERC region and climate category by using the OneHotEncoder class from sklearn and kept all the quantitative categories as is. </br> </br>
 
+We evaluated the performance of our model using the f1_score method, and our model received an f1_score of 0.6118824440755535. This suggests that the harmonic mean of precision and recall to be 0.6118, indicating a reasonably good balance between precision and recall. As such, our current model is pretty good.
+
