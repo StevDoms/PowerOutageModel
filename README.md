@@ -24,8 +24,10 @@ We evaluated the performance of our final model using f1_score, and our model re
 
 We conducted a permutation test for groups which are outages above and below 24 hours. In addition, we used f1_score as our evaluation metric and a significance level of 5%.
 
-**Null hypothesis**: My model is fair. The f1_score for outages above 24hours (1440minutes) is the same as f1_score for outages below 24hours, and any differences are due to random chance </br>
-**Alternative hypothesis**: My model is unfair. The f1_score is different for outages above and below 24 hours.
+**Null hypothesis**: My model is fair. The f1_score for outages above 24hours (1440minutes) is the same as f1_score for outages below 24hours, and any differences are due to random chance
+
+**Alternative hypothesis**: My model is unfair. The f1_score is different for outages above and below 24 hours
+
 **Test Statistic**: Absolute difference between the f1_score of outages above and below 24 hours
 
 Based on our permutation test, we obtain a p-value of 0.0% which is less than our set threshold of 5%. Hence, we reject our null hypothesis, and conclude that there is a statistical difference between the f1_score of outages above and below 24 hours.
